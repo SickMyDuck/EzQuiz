@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +12,73 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="0l3-0u-jD1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="773"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGy-MS-Fio" userLabel="Top View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="249"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF7-uE-ugb">
+                                                <rect key="frame" x="144" y="54.5" width="126.5" height="140"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="100"/>
+                                                <color key="textColor" red="0.98016482589999998" green="0.98432952169999999" blue="0.96058028939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vF7-uE-ugb" firstAttribute="centerY" secondItem="SGy-MS-Fio" secondAttribute="centerY" id="F2T-Sz-Xs2"/>
+                                            <constraint firstItem="vF7-uE-ugb" firstAttribute="centerX" secondItem="SGy-MS-Fio" secondAttribute="centerX" id="Jnb-0P-KAU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Wm-b4-5TN" userLabel="Middle View">
+                                        <rect key="frame" x="0.0" y="262" width="414" height="249"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukb-fH-mKq">
+                                                <rect key="frame" x="8" y="82.5" width="124.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="60"/>
+                                                <color key="textColor" red="0.98016482589999998" green="0.98432952169999999" blue="0.96058028939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ukb-fH-mKq" firstAttribute="centerY" secondItem="1Wm-b4-5TN" secondAttribute="centerY" id="KPQ-C7-1Kx"/>
+                                            <constraint firstItem="ukb-fH-mKq" firstAttribute="leading" secondItem="1Wm-b4-5TN" secondAttribute="leading" constant="8" id="SY5-oV-sz8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPX-9i-bTm" userLabel="Bottom View">
+                                        <rect key="frame" x="0.0" y="524" width="414" height="249"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SeeqMyDuck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ku-rd-NeW">
+                                                <rect key="frame" x="293" y="110.5" width="121" height="28"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="20"/>
+                                                <color key="textColor" red="0.98016482589999998" green="0.98432952169999999" blue="0.96058028939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2ku-rd-NeW" firstAttribute="centerY" secondItem="bPX-9i-bTm" secondAttribute="centerY" id="9jh-tO-YdI"/>
+                                            <constraint firstAttribute="trailing" secondItem="2ku-rd-NeW" secondAttribute="trailing" id="yoH-oh-QCt"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0l3-0u-jD1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dNb-tU-plO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0l3-0u-jD1" secondAttribute="bottom" constant="45" id="sHv-k5-jDI"/>
+                            <constraint firstItem="0l3-0u-jD1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tVs-xR-JGS"/>
+                            <constraint firstItem="0l3-0u-jD1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tjZ-Dy-G1z"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-242.0289855072464" y="-42.1875"/>
         </scene>
     </scenes>
 </document>
