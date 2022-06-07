@@ -9,9 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    var viewModel = ViewModel()
-    
-   // @IBOutlet weak var flagImage: UIImageView!
+    var viewModel = LoginViewModel()
     
     @IBOutlet weak var nameField: UITextField!
 
@@ -24,9 +22,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         bindViewModel()
         
         initialState()
+        
+        viewModel.preloadItems()
         
     }
     
@@ -39,6 +40,11 @@ class LoginViewController: UIViewController {
             DispatchQueue.main.async {
                 self.label.text = statusText
             }
+        }
+        viewModel.nameField.bind { nameFieldText in
+
+                self.nameField.text = nameFieldText
+
         }
     }
     

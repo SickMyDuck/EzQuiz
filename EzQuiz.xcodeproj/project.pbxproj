@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		592D2C5E280C774100ADA02C /* quizQuestions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 592D2C5C280C774000ADA02C /* quizQuestions.xcdatamodeld */; };
-		59BB50C8284F4F2B004B160B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50C7284F4F2B004B160B /* User.swift */; };
-		59BB50CA284F4F9C004B160B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50C9284F4F9C004B160B /* ViewModel.swift */; };
+		592D2C5E280C774100ADA02C /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 592D2C5C280C774000ADA02C /* DataModel.xcdatamodeld */; };
+		59BB50CA284F4F9C004B160B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50C9284F4F9C004B160B /* LoginViewModel.swift */; };
 		59BB50CD284F4FEF004B160B /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50CC284F4FEF004B160B /* Dynamic.swift */; };
 		59BB50D1284F60C9004B160B /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D0284F60C9004B160B /* QuizViewController.swift */; };
+		59BB50D3284F7845004B160B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D2284F7845004B160B /* CoreDataManager.swift */; };
 		59EFD1F42805FA5C00252CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD1F32805FA5C00252CC1 /* AppDelegate.swift */; };
 		59EFD1F62805FA5C00252CC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD1F52805FA5C00252CC1 /* SceneDelegate.swift */; };
 		59EFD1F82805FA5C00252CC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD1F72805FA5C00252CC1 /* LoginViewController.swift */; };
@@ -21,11 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		592D2C5D280C774100ADA02C /* flagQuestions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = flagQuestions.xcdatamodel; sourceTree = "<group>"; };
-		59BB50C7284F4F2B004B160B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		59BB50C9284F4F9C004B160B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		592D2C5D280C774100ADA02C /* QuizQuestions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuizQuestions.xcdatamodel; sourceTree = "<group>"; };
+		59BB50C9284F4F9C004B160B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		59BB50CC284F4FEF004B160B /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		59BB50D0284F60C9004B160B /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		59BB50D2284F7845004B160B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		59EFD1F02805FA5C00252CC1 /* EzQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EzQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EFD1F32805FA5C00252CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59EFD1F52805FA5C00252CC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +50,8 @@
 		59BB50C3284F4ED1004B160B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				59BB50C7284F4F2B004B160B /* User.swift */,
+				59BB50D2284F7845004B160B /* CoreDataManager.swift */,
+				592D2C5C280C774000ADA02C /* DataModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -69,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				59BB50CB284F4FE0004B160B /* Bindings */,
-				59BB50C9284F4F9C004B160B /* ViewModel.swift */,
+				59BB50C9284F4F9C004B160B /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -113,7 +114,6 @@
 				59BB50C5284F4EDD004B160B /* ViewModels */,
 				59BB50C4284F4ED8004B160B /* Views */,
 				59BB50C3284F4ED1004B160B /* Models */,
-				592D2C5C280C774000ADA02C /* quizQuestions.xcdatamodeld */,
 				59EFD1F32805FA5C00252CC1 /* AppDelegate.swift */,
 				59EFD1F52805FA5C00252CC1 /* SceneDelegate.swift */,
 				59EFD1FC2805FA5F00252CC1 /* Assets.xcassets */,
@@ -198,9 +198,9 @@
 				59EFD1F62805FA5C00252CC1 /* SceneDelegate.swift in Sources */,
 				59BB50D1284F60C9004B160B /* QuizViewController.swift in Sources */,
 				59BB50CD284F4FEF004B160B /* Dynamic.swift in Sources */,
-				59BB50C8284F4F2B004B160B /* User.swift in Sources */,
-				59BB50CA284F4F9C004B160B /* ViewModel.swift in Sources */,
-				592D2C5E280C774100ADA02C /* quizQuestions.xcdatamodeld in Sources */,
+				59BB50D3284F7845004B160B /* CoreDataManager.swift in Sources */,
+				59BB50CA284F4F9C004B160B /* LoginViewModel.swift in Sources */,
+				592D2C5E280C774100ADA02C /* DataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,13 +422,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		592D2C5C280C774000ADA02C /* quizQuestions.xcdatamodeld */ = {
+		592D2C5C280C774000ADA02C /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				592D2C5D280C774100ADA02C /* flagQuestions.xcdatamodel */,
+				592D2C5D280C774100ADA02C /* QuizQuestions.xcdatamodel */,
 			);
-			currentVersion = 592D2C5D280C774100ADA02C /* flagQuestions.xcdatamodel */;
-			path = quizQuestions.xcdatamodeld;
+			currentVersion = 592D2C5D280C774100ADA02C /* QuizQuestions.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

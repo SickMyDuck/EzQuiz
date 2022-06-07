@@ -5,7 +5,12 @@
         <attribute name="possibleAnswers" optional="YES" attributeType="Transformable"/>
         <attribute name="rightAnswer" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Users" representedClassName="Users" syncable="YES" codeGenerationType="class">
+        <attribute name="loggedIn" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="FlagQuestions" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Users" positionX="-45" positionY="27" width="128" height="59"/>
     </elements>
 </model>
