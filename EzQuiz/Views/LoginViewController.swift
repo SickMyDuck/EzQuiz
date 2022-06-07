@@ -11,6 +11,8 @@ class LoginViewController: UIViewController {
 
     var viewModel = LoginViewModel()
     
+    var loggedIn = false
+    
     @IBOutlet weak var nameField: UITextField!
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
@@ -29,6 +31,10 @@ class LoginViewController: UIViewController {
         
         viewModel.preloadItems()
         
+        if loggedIn {
+            self.performSegue(withIdentifier: "goToMenu", sender: self)
+        }
+        
     }
     
     func initialState() {
@@ -36,16 +42,21 @@ class LoginViewController: UIViewController {
     }
     
     func bindViewModel() {
-        viewModel.statusText.bind { statusText in
-            DispatchQueue.main.async {
-                self.label.text = statusText
-            }
-        }
         viewModel.nameField.bind { nameFieldText in
 
-                self.nameField.text = nameFieldText
+            if !nameFieldText.isEmpty {
+                self.loggedIn = true
+                return
+            }
 
         }
+        
+        
+//        viewModel.statusText.bind { statusText in
+//            DispatchQueue.main.async {
+//                self.label.text = statusText
+//            }
+//        }
     }
     
 
