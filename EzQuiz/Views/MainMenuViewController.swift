@@ -21,7 +21,7 @@ class MainMenuViewController: UITableViewController {
         bindMainMenuViewModel()
         
         
-        let flagItem = MainMenuItem.init(title: "Can you guess flags?", image: UIImage(named: "MainMenuFlagIcon")!, points: 0)
+        let flagItem = MainMenuItem.init(id: "flagItem", title: "Can you guess flags?", image: UIImage(named: "MainMenuFlagIcon")!, points: 0)
         mainMenuItems.append(flagItem)
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MainMenuCell")
@@ -49,8 +49,15 @@ class MainMenuViewController: UITableViewController {
         let item = mainMenuItems[indexPath.row]
         
         cell.textLabel?.text = item.title
+        cell.imageView?.image = item.image
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if mainMenuItems[indexPath.row].id == "flagItem" {
+            performSegue(withIdentifier: "goToFlagQuiz", sender: self)
+        }
     }
 
     
