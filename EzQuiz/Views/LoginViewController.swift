@@ -13,10 +13,14 @@ class LoginViewController: UIViewController {
     
     var loggedIn = false
     
+    var user = Users()
+    
     @IBOutlet weak var nameField: UITextField!
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        viewModel.userButtonPressed(name: nameField.text ?? "")
+        if let user = viewModel.userButtonPressed(name: nameField.text ?? "") {
+            self.user = user
+        }
     }
     
     @IBOutlet weak var label: UILabel!
@@ -52,13 +56,17 @@ class LoginViewController: UIViewController {
         }
         
         
-//        viewModel.statusText.bind { statusText in
-//            DispatchQueue.main.async {
-//                self.label.text = statusText
-//            }
-//        }
+        viewModel.statusText.bind { statusText in
+            DispatchQueue.main.async {
+                self.label.text = statusText
+            }
+        }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! MainMenuViewController
+        controller.loggedUser = user
+    }
 
 }
 

@@ -7,27 +7,30 @@
 
 import Foundation
 import CoreData
-import UIKit
 
 class LoginViewModel: ObservableObject {
     var statusText = Dynamic("")
     var nameField = Dynamic("")
     
-    func userButtonPressed(name: String) {
+    func userButtonPressed(name: String) -> Users? {
+        var user = Users()
         if name.isEmpty {
             statusText.value = "Enter your name!"
         } else {
             statusText.value = "Success!"
-            addUser(name: name)
+            user = addUser(name: name)!
         }
+        return user
     }
     
-    func addUser(name: String) {
+    func addUser(name: String) -> Users? {
         let user = Users(context: CoreDataManager.shared.viewContext)
         user.name = name
         user.loggedIn = true
         
         CoreDataManager.shared.save()
+        
+        return user
     }
     
     

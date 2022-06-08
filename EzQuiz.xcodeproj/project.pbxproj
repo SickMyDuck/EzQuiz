@@ -13,6 +13,8 @@
 		59BB50D1284F60C9004B160B /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D0284F60C9004B160B /* QuizViewController.swift */; };
 		59BB50D3284F7845004B160B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D2284F7845004B160B /* CoreDataManager.swift */; };
 		59BB50D5284FA0BB004B160B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D4284FA0BB004B160B /* MainMenuViewController.swift */; };
+		59BB50D7284FA7FB004B160B /* MainMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D6284FA7FB004B160B /* MainMenuItem.swift */; };
+		59BB50D9284FABD6004B160B /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D8284FABD6004B160B /* MainMenuViewModel.swift */; };
 		59EFD1F42805FA5C00252CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD1F32805FA5C00252CC1 /* AppDelegate.swift */; };
 		59EFD1F62805FA5C00252CC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD1F52805FA5C00252CC1 /* SceneDelegate.swift */; };
 		59EFD1F82805FA5C00252CC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD1F72805FA5C00252CC1 /* LoginViewController.swift */; };
@@ -28,6 +30,8 @@
 		59BB50D0284F60C9004B160B /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		59BB50D2284F7845004B160B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		59BB50D4284FA0BB004B160B /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		59BB50D6284FA7FB004B160B /* MainMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuItem.swift; sourceTree = "<group>"; };
+		59BB50D8284FABD6004B160B /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
 		59EFD1F02805FA5C00252CC1 /* EzQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EzQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EFD1F32805FA5C00252CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59EFD1F52805FA5C00252CC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			children = (
 				59BB50CB284F4FE0004B160B /* Bindings */,
 				59BB50C9284F4F9C004B160B /* LoginViewModel.swift */,
+				59BB50D8284FABD6004B160B /* MainMenuViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				59EFD1F52805FA5C00252CC1 /* SceneDelegate.swift */,
 				59EFD1FC2805FA5F00252CC1 /* Assets.xcassets */,
 				59EFD2012805FA5F00252CC1 /* Info.plist */,
+				59BB50D6284FA7FB004B160B /* MainMenuItem.swift */,
 			);
 			path = EzQuiz;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59BB50D7284FA7FB004B160B /* MainMenuItem.swift in Sources */,
 				59BB50D5284FA0BB004B160B /* MainMenuViewController.swift in Sources */,
 				59EFD1F82805FA5C00252CC1 /* LoginViewController.swift in Sources */,
 				59EFD1F42805FA5C00252CC1 /* AppDelegate.swift in Sources */,
@@ -203,6 +210,7 @@
 				59BB50D1284F60C9004B160B /* QuizViewController.swift in Sources */,
 				59BB50CD284F4FEF004B160B /* Dynamic.swift in Sources */,
 				59BB50D3284F7845004B160B /* CoreDataManager.swift in Sources */,
+				59BB50D9284FABD6004B160B /* MainMenuViewModel.swift in Sources */,
 				59BB50CA284F4F9C004B160B /* LoginViewModel.swift in Sources */,
 				592D2C5E280C774100ADA02C /* DataModel.xcdatamodeld in Sources */,
 			);
