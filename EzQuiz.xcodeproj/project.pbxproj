@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		592D2C5E280C774100ADA02C /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 592D2C5C280C774000ADA02C /* DataModel.xcdatamodeld */; };
+		598B74802851E44900DC8E9F /* BasicFlagQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B747F2851E44900DC8E9F /* BasicFlagQuestions.swift */; };
+		598B74822851E78000DC8E9F /* SimpleFlagQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B74812851E78000DC8E9F /* SimpleFlagQuestions.swift */; };
+		598B74842851EAB900DC8E9F /* FlagQuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B74832851EAB900DC8E9F /* FlagQuizBrain.swift */; };
+		598B74862852078200DC8E9F /* QuizBrainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B74852852078200DC8E9F /* QuizBrainError.swift */; };
+		598B7488285229E600DC8E9F /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B7487285229E600DC8E9F /* LoadingScreenViewController.swift */; };
 		59BB50CA284F4F9C004B160B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50C9284F4F9C004B160B /* LoginViewModel.swift */; };
 		59BB50CD284F4FEF004B160B /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50CC284F4FEF004B160B /* Dynamic.swift */; };
-		59BB50D1284F60C9004B160B /* FlagQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D0284F60C9004B160B /* FlagQuizViewController.swift */; };
+		59BB50D1284F60C9004B160B /* SimpleFlagQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D0284F60C9004B160B /* SimpleFlagQuizViewController.swift */; };
 		59BB50D3284F7845004B160B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D2284F7845004B160B /* CoreDataManager.swift */; };
 		59BB50D5284FA0BB004B160B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D4284FA0BB004B160B /* MainMenuViewController.swift */; };
 		59BB50D7284FA7FB004B160B /* MainMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB50D6284FA7FB004B160B /* MainMenuItem.swift */; };
@@ -27,9 +32,14 @@
 /* Begin PBXFileReference section */
 		52DC15AC275C04BCB57899D6 /* Pods-EzQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EzQuiz.debug.xcconfig"; path = "Target Support Files/Pods-EzQuiz/Pods-EzQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		592D2C5D280C774100ADA02C /* QuizQuestions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuizQuestions.xcdatamodel; sourceTree = "<group>"; };
+		598B747F2851E44900DC8E9F /* BasicFlagQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFlagQuestions.swift; sourceTree = "<group>"; };
+		598B74812851E78000DC8E9F /* SimpleFlagQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFlagQuestions.swift; sourceTree = "<group>"; };
+		598B74832851EAB900DC8E9F /* FlagQuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagQuizBrain.swift; sourceTree = "<group>"; };
+		598B74852852078200DC8E9F /* QuizBrainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrainError.swift; sourceTree = "<group>"; };
+		598B7487285229E600DC8E9F /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		59BB50C9284F4F9C004B160B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		59BB50CC284F4FEF004B160B /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
-		59BB50D0284F60C9004B160B /* FlagQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagQuizViewController.swift; sourceTree = "<group>"; };
+		59BB50D0284F60C9004B160B /* SimpleFlagQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFlagQuizViewController.swift; sourceTree = "<group>"; };
 		59BB50D2284F7845004B160B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		59BB50D4284FA0BB004B160B /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		59BB50D6284FA7FB004B160B /* MainMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuItem.swift; sourceTree = "<group>"; };
@@ -64,13 +74,13 @@
 				52DC15AC275C04BCB57899D6 /* Pods-EzQuiz.debug.xcconfig */,
 				5B586EAE8F6BE927EEFBBC36 /* Pods-EzQuiz.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		59BB50C3284F4ED1004B160B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				59BB50D6284FA7FB004B160B /* MainMenuItem.swift */,
 				59BB50D2284F7845004B160B /* CoreDataManager.swift */,
 				592D2C5C280C774000ADA02C /* DataModel.xcdatamodeld */,
 			);
@@ -80,9 +90,10 @@
 		59BB50C4284F4ED8004B160B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				59BB50D0284F60C9004B160B /* FlagQuizViewController.swift */,
+				59BB50D0284F60C9004B160B /* SimpleFlagQuizViewController.swift */,
 				59EFD1F72805FA5C00252CC1 /* LoginViewController.swift */,
 				59BB50D4284FA0BB004B160B /* MainMenuViewController.swift */,
+				598B7487285229E600DC8E9F /* LoadingScreenViewController.swift */,
 				59BB50C6284F4EED004B160B /* Storyboards */,
 			);
 			path = Views;
@@ -143,7 +154,10 @@
 				59EFD1F52805FA5C00252CC1 /* SceneDelegate.swift */,
 				59EFD1FC2805FA5F00252CC1 /* Assets.xcassets */,
 				59EFD2012805FA5F00252CC1 /* Info.plist */,
-				59BB50D6284FA7FB004B160B /* MainMenuItem.swift */,
+				598B747F2851E44900DC8E9F /* BasicFlagQuestions.swift */,
+				598B74812851E78000DC8E9F /* SimpleFlagQuestions.swift */,
+				598B74832851EAB900DC8E9F /* FlagQuizBrain.swift */,
+				598B74852852078200DC8E9F /* QuizBrainError.swift */,
 			);
 			path = EzQuiz;
 			sourceTree = "<group>";
@@ -271,13 +285,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				598B74862852078200DC8E9F /* QuizBrainError.swift in Sources */,
 				59BB50D7284FA7FB004B160B /* MainMenuItem.swift in Sources */,
+				598B74802851E44900DC8E9F /* BasicFlagQuestions.swift in Sources */,
 				59BB50D5284FA0BB004B160B /* MainMenuViewController.swift in Sources */,
+				598B74842851EAB900DC8E9F /* FlagQuizBrain.swift in Sources */,
 				59EFD1F82805FA5C00252CC1 /* LoginViewController.swift in Sources */,
 				59EFD1F42805FA5C00252CC1 /* AppDelegate.swift in Sources */,
 				59EFD1F62805FA5C00252CC1 /* SceneDelegate.swift in Sources */,
-				59BB50D1284F60C9004B160B /* FlagQuizViewController.swift in Sources */,
+				598B74822851E78000DC8E9F /* SimpleFlagQuestions.swift in Sources */,
+				59BB50D1284F60C9004B160B /* SimpleFlagQuizViewController.swift in Sources */,
 				59BB50CD284F4FEF004B160B /* Dynamic.swift in Sources */,
+				598B7488285229E600DC8E9F /* LoadingScreenViewController.swift in Sources */,
 				59BB50D3284F7845004B160B /* CoreDataManager.swift in Sources */,
 				59BB50D9284FABD6004B160B /* MainMenuViewModel.swift in Sources */,
 				59BB50CA284F4F9C004B160B /* LoginViewModel.swift in Sources */,

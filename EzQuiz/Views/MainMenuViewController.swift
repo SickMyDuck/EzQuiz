@@ -56,7 +56,7 @@ class MainMenuViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if mainMenuItems[indexPath.row].id == "flagItem" {
-            performSegue(withIdentifier: "goToFlagQuiz", sender: self)
+            performSegue(withIdentifier: "goToLoadingScreen", sender: self)
         }
     }
 

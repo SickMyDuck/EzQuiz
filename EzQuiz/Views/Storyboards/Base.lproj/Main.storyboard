@@ -30,8 +30,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VD4-sg-YBY">
                                 <rect key="frame" x="120" y="355" width="174" height="31"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.87450980389999999" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.1323174536" green="0.15670803189999999" blue="0.19246611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enter"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="msI-Qc-YEm" eventType="touchUpInside" id="Ffw-pK-t6R"/>
                                 </connections>
@@ -69,9 +71,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="3m0-Mr-tbJ"/>
                     <connections>
+                        <outlet property="enterButton" destination="VD4-sg-YBY" id="HIo-Fk-fGp"/>
                         <outlet property="label" destination="Xhi-Vs-FVI" id="A9X-kq-NgN"/>
                         <outlet property="nameField" destination="dCv-Cr-hlG" id="jFd-J2-INb"/>
-                        <segue destination="NcJ-Y4-hSW" kind="push" identifier="goToMenu" id="u4P-DP-HgU"/>
+                        <segue destination="NcJ-Y4-hSW" kind="show" identifier="goToMenu" id="u4P-DP-HgU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dpl-Is-TfZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,17 +124,51 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="3pH-W0-PT2"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToFlagQuiz" id="1fe-ef-K89"/>
+                        <segue destination="b6x-ar-2Dc" kind="show" identifier="goToLoadingScreen" id="nxM-8V-I2A"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iht-QU-uLq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1468" y="98"/>
         </scene>
-        <!--Flag Quiz View Controller-->
+        <!--Loading Screen View Controller-->
+        <scene sceneID="z6x-vL-xAH">
+            <objects>
+                <viewController id="b6x-ar-2Dc" customClass="LoadingScreenViewController" customModule="EzQuiz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tv5-qy-Ibg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="0BH-aa-Hs6">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="L8s-ML-lT7"/>
+                                    <constraint firstAttribute="height" constant="100" id="yl5-6B-nAD"/>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pOk-wK-pfw"/>
+                        <color key="backgroundColor" red="0.1323174536" green="0.15670803189999999" blue="0.19246611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0BH-aa-Hs6" firstAttribute="centerX" secondItem="Tv5-qy-Ibg" secondAttribute="centerX" id="0dl-2R-qvP"/>
+                            <constraint firstItem="0BH-aa-Hs6" firstAttribute="centerY" secondItem="Tv5-qy-Ibg" secondAttribute="centerY" id="FQf-Iy-h8k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yyH-sa-p4l"/>
+                    <connections>
+                        <outlet property="spinner" destination="0BH-aa-Hs6" id="uaV-9H-Wwd"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSimpleFlagQuiz" id="Cli-oC-yzK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHR-fU-IDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2415.9420289855075" y="97.767857142857139"/>
+        </scene>
+        <!--Simple Flag Quiz View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FlagQuizViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SimpleFlagQuizViewController" customModule="EzQuiz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,6 +197,9 @@
                                             <color key="titleColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <imageReference key="backgroundImage" image="Rectangle" symbolScale="default"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5z9-fK-0Pl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Coa-vI-bun" userLabel="Second Button">
                                         <rect key="frame" x="0.0" y="653" width="374" height="80"/>
@@ -171,6 +211,9 @@
                                         <state key="normal" title="Second Button" backgroundImage="Rectangle">
                                             <color key="titleColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tql-Dh-AkB"/>
+                                        </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kc6-nf-p9s">
                                         <rect key="frame" x="0.0" y="764" width="374" height="10"/>
@@ -191,10 +234,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="71U-F6-nF5"/>
+                    <connections>
+                        <outlet property="firstButton" destination="yFD-R2-WeO" id="7on-Ki-d30"/>
+                        <outlet property="flagImage" destination="bkj-lR-Ttq" id="f1j-rz-ikZ"/>
+                        <outlet property="progressBar" destination="Kc6-nf-p9s" id="QpF-sg-Pwy"/>
+                        <outlet property="scoreLabel" destination="L73-OQ-TuS" id="qYx-0b-NjD"/>
+                        <outlet property="secondButton" destination="Coa-vI-bun" id="TP4-of-ggV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2309" y="98"/>
+            <point key="canvasLocation" x="3342" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H8T-76-Pap">

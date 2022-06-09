@@ -15,19 +15,22 @@ class LoginViewController: UIViewController {
     
     var user = Users()
     
+    @IBOutlet weak var enterButton: UIButton!
+    
     @IBOutlet weak var nameField: UITextField!
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         if let user = viewModel.userButtonPressed(name: nameField.text ?? "") {
             self.user = user
+            goToMenu()
         }
     }
     
     @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
         
         bindViewModel()
         
@@ -36,13 +39,15 @@ class LoginViewController: UIViewController {
         viewModel.preloadItems()
         
         if loggedIn {
-            self.performSegue(withIdentifier: "goToMenu", sender: self)
+            self.goToMenu()
         }
         
     }
     
     func initialState() {
         label.text = ""
+        
+        enterButton.layer.cornerRadius = 10.0
     }
     
     func bindViewModel() {
@@ -68,5 +73,8 @@ class LoginViewController: UIViewController {
         controller.loggedUser = user
     }
 
+    func goToMenu() {
+        performSegue(withIdentifier: "goToMenu", sender: self)
+    }
 }
 
