@@ -1,2 +1,2 @@
 # EzQuiz
-Quiz for iOS
+Quiz for guessing flags on iOS
